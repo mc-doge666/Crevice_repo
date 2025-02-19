@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdbekptjwrqdu"]
+
+[ext_resource type="Texture2D" uid="uid://dp0clqn2gemsj" path="res://Asset/sprite/background.png" id="1_hhyns"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1hmm8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiucg"]
+size = Vector2(27.5, 37.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ign1k"]
+size = Vector2(45.5, 30.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyrd8"]
+size = Vector2(11.375, 17)
+
+[node name="SceneA" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(6, 6)
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_hhyns")
+
+[node name="Border" type="StaticBody2D" parent="."]
+
+[node name="Down" type="CollisionShape2D" parent="Border"]
+position = Vector2(0, 54)
+shape = SubResource("WorldBoundaryShape2D_1hmm8")
+
+[node name="Left" type="CollisionShape2D" parent="Border"]
+position = Vector2(-96, 0)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_1hmm8")
+
+[node name="Up" type="CollisionShape2D" parent="Border"]
+position = Vector2(0, -54)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_1hmm8")
+
+[node name="Right" type="CollisionShape2D" parent="Border"]
+position = Vector2(96, 0)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_1hmm8")
+
+[node name="Bookshelf" type="StaticBody2D" parent="."]
+
+[node name="BookshelfLeft" type="CollisionShape2D" parent="Bookshelf"]
+position = Vector2(21, -27)
+shape = SubResource("RectangleShape2D_oiucg")
+
+[node name="BookshelfRight" type="CollisionShape2D" parent="Bookshelf"]
+position = Vector2(50.25, -26.75)
+shape = SubResource("RectangleShape2D_oiucg")
+
+[node name="TableAndChair" type="StaticBody2D" parent="."]
+
+[node name="Table" type="CollisionShape2D" parent="TableAndChair"]
+position = Vector2(-36, 21)
+shape = SubResource("RectangleShape2D_ign1k")
+
+[node name="ChairUpper" type="CollisionShape2D" parent="TableAndChair"]
+position = Vector2(-36, 5)
+shape = SubResource("RectangleShape2D_jyrd8")
+
+[node name="ChairLower" type="CollisionShape2D" parent="TableAndChair"]
+position = Vector2(-36, 29)
+shape = SubResource("RectangleShape2D_jyrd8")
