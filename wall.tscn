@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1knpa87jxvt5"]
+
+[ext_resource type="Texture2D" uid="uid://hf1rqgebxisv" path="res://resource/wall_windows_1.png" id="1_4k38y"]
+[ext_resource type="Texture2D" uid="uid://dgk4xp8um6vqk" path="res://resource/wall_windows_2.png" id="2_jywse"]
+[ext_resource type="Texture2D" uid="uid://bhjx4x1owdb16" path="res://resource/wall.png" id="3_uilja"]
+[ext_resource type="Texture2D" uid="uid://dsweth8x12nu5" path="res://resource/wall2.png" id="4_cyenr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlbfc"]
+texture = ExtResource("1_4k38y")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_la8at"]
+texture = ExtResource("2_jywse")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7w0ma"]
+texture = ExtResource("3_uilja")
+texture_region_size = Vector2i(32, 32)
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xgmm"]
+texture = ExtResource("4_cyenr")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t7xx2"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 4
+sources/1 = SubResource("TileSetAtlasSource_mlbfc")
+sources/2 = SubResource("TileSetAtlasSource_la8at")
+sources/8 = SubResource("TileSetAtlasSource_7w0ma")
+sources/9 = SubResource("TileSetAtlasSource_7xgmm")
+
+[node name="TileMapLayer" type="TileMapLayer"]
+tile_set = SubResource("TileSet_t7xx2")

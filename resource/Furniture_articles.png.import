@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtneqs5u5rkpa"
-path="res://.godot/imported/Inside_home_B.png-5586257919989981419411a40770a132.ctex"
+uid="uid://gxkau2eef6xq"
+path="res://.godot/imported/Furniture_articles.png-2d77a4934599236e5802a08d8ae84473.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource/Inside_home_B.png"
-dest_files=["res://.godot/imported/Inside_home_B.png-5586257919989981419411a40770a132.ctex"]
+source_file="res://resource/Furniture_articles.png"
+dest_files=["res://.godot/imported/Furniture_articles.png-2d77a4934599236e5802a08d8ae84473.ctex"]
 
 [params]
 
